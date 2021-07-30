@@ -16,7 +16,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Distress"></activity>
+        <activity android:name=".Maps_Activity"></activity>
+
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity
+            android:name=".MapActivity"
+            android:label="@string/title_activity_map" />
+        <activity android:name=".Distress" />
         <activity android:name=".SendSMS" />
         <activity android:name=".Receipt" />
         <activity android:name=".Confirm_hire" />
